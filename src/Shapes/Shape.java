@@ -3,6 +3,7 @@ package Shapes;
 public abstract class Shape{
     private String hexColor;
 
+
     protected Shape(String color){
         this.hexColor = color;
     }
