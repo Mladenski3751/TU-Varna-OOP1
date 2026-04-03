@@ -1,20 +1,25 @@
 package Shapes;
 
-public abstract class Shape{
-    private String hexColor;
+public abstract class Shape {
+    private String color;
 
-
-    protected Shape(String color){
-        this.hexColor = color;
+    protected Shape(String color) {
+        this.color = color;
     }
 
     public String getColor() {
-        return hexColor;
+        return color;
     }
 
-    public abstract void shift(double x, double y);
+    protected String fmt(double val) {
+        if (val == (long) val) {
+            return String.valueOf((long) val);
+        }
+        return String.valueOf(val);
+    }
+
+    public abstract void shift(double dx, double dy);
     public abstract String convertToSvg();
     public abstract String describe();
-
     public abstract boolean isContainedInRect(double rx, double ry, double rw, double rh);
 }
