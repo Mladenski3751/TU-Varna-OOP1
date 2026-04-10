@@ -29,6 +29,7 @@ public class Circle extends Shape {
 
     @Override
     public boolean isContainedInRect(double rx, double ry, double rw, double rh) {
+        // bug: rw и rh са ширина/височина, но ги ползвам като абсолютни координати на края
         return (cx - r >= rx) && (cx + r <= rw) &&
                 (cy - r >= ry) && (cy + r <= rh);
     }

@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Editor {
-    private List<Shape> shapes = new ArrayList<>();
+    private final List<Shape> shapes = new ArrayList<>();
 
-    public void addShape(Shape s) {
-        shapes.add(s);
+    public void addShape(Shape shape) {
+        shapes.add(shape);
     }
 
     public List<String> getItemsList() {
@@ -27,14 +27,19 @@ public class Editor {
         return "Erased a " + removed.getClass().getSimpleName().toLowerCase() + " (" + index + ")";
     }
 
-    public void translateShapes(Integer index, double dx, double dy) {
-        if (index == null) {
-            for (Shape s : shapes) {
-                s.shift(dx, dy);
-            }
-        } else if (index >= 1 && index <= shapes.size()) {
-            shapes.get(index - 1).shift(dx, dy);
+    public String translateAll(double dx, double dy) {
+        for (Shape s : shapes) {
+            s.shift(dx, dy);
         }
+        return "Translated all figures";
+    }
+
+    public String translateOne(int index, double dx, double dy) {
+        if (index < 1 || index > shapes.size()) {
+            return "Error: There is no figure number " + index + "!";
+        }
+        shapes.get(index - 1).shift(dx, dy);
+        return "Translated figure (" + index + ")";
     }
 
     public List<String> findWithinRect(double x, double y, double w, double h) {
