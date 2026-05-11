@@ -1,8 +1,19 @@
 package Shapes;
 
+/**
+ * Клас, представляващ геометрична фигура кръг.
+ * Наследява базовия клас Shape и дефинира специфичните за кръг свойства и поведение.
+ */
 public class Circle extends Shape {
     private double cx, cy, r;
 
+    /**
+     * Конструктор за създаване на кръг.
+     * @param cx X координата на центъра.
+     * @param cy Y координата на центъра.
+     * @param r Радиус на кръга.
+     * @param color Цвят на запълване.
+     */
     public Circle(double cx, double cy, double r, String color) {
         super(color);
         this.cx = cx;
@@ -29,7 +40,6 @@ public class Circle extends Shape {
 
     @Override
     public boolean isContainedInRect(double rx, double ry, double rw, double rh) {
-        // bug: rw и rh са ширина/височина, но ги ползвам като абсолютни координати на края
         return (cx - r >= rx) && (cx + r <= rw) &&
                 (cy - r >= ry) && (cy + r <= rh);
     }

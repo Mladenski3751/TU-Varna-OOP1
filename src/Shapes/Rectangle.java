@@ -1,8 +1,20 @@
 package Shapes;
 
+/**
+ * Клас за представяне на правоъгълник.
+ * Съхранява координати, размери и цвят на фигурата.
+ */
 public class Rectangle extends Shape {
     private double x, y, width, height;
 
+    /**
+     * Конструктор за създаване на правоъгълник.
+     * @param x X координата на горния ляв ъгъл.
+     * @param y Y координата на горния ляв ъгъл.
+     * @param width Ширина.
+     * @param height Височина.
+     * @param color Цвят на запълване.
+     */
     public Rectangle(double x, double y, double width, double height, String color) {
         super(color);
         this.x = x;
@@ -26,7 +38,7 @@ public class Rectangle extends Shape {
     @Override
     public String describe() {
         return String.format("rectangle %s %s %s %s %s",
-                fmt(x), fmt(y), fmt(height), fmt(width), getColor());
+                fmt(x), fmt(y), fmt(width), fmt(height), getColor());
     }
 
     @Override
