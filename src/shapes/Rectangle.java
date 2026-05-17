@@ -1,4 +1,4 @@
-package Shapes;
+package shapes;
 
 /**
  * Клас за представяне на правоъгълник.
@@ -46,5 +46,18 @@ public class Rectangle extends Shape {
         return x >= rx && y >= ry &&
                 x + width <= rx + rw &&
                 y + height <= ry + rh;
+    }
+
+    @Override
+    public boolean isContainedInCircle(double cx, double cy, double r) {
+        double r2 = r * r;
+        return distSq(x, y, cx, cy) <= r2 &&
+                distSq(x + width, y, cx, cy) <= r2 &&
+                distSq(x, y + height, cx, cy) <= r2 &&
+                distSq(x + width, y + height, cx, cy) <= r2;
+    }
+
+    private double distSq(double px, double py, double cx, double cy) {
+        return (px - cx) * (px - cx) + (py - cy) * (py - cy);
     }
 }

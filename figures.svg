@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <circle cx="10" cy="45" r="5" fill="green" />
+  <line x1="-5" y1="25" x2="10" y2="40" stroke="green" />
+</svg>

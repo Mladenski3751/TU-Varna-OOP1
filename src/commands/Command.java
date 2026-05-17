@@ -1,4 +1,4 @@
-package Commands;
+package commands;
 
 /**
  * Интерфейс за реализация на шаблона "Command".

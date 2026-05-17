@@ -1,4 +1,4 @@
-package Shapes;
+package shapes;
 
 /**
  * Абстрактен клас, представляващ базова геометрична фигура.
@@ -63,4 +63,14 @@ public abstract class Shape {
      * @return true, ако е вътре в региона; false в противен случай.
      */
     public abstract boolean isContainedInRect(double rx, double ry, double rw, double rh);
+
+
+    /**
+    * Проверява дали фигурата се съдържа изцяло в даден кръгов регион.
+    * @param cx X координата на центъра на кръга.
+    * @param cy Y координата на центъра на кръга.
+    * @param r  Радиус на кръга.
+    * @return true, ако е вътре в региона; false в противен случай.
+    */
+    public abstract boolean isContainedInCircle(double cx, double cy, double r);
 }

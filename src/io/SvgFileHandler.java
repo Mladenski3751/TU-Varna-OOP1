@@ -1,7 +1,7 @@
-package IO;
+package io;
 
-import Shapes.Shape;
-import Shapes.ShapeFactory;
+import shapes.Shape;
+import shapes.ShapeFactory;
 
 import java.io.*;
 import java.util.ArrayList;

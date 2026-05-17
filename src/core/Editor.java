@@ -1,6 +1,6 @@
-package Core;
+package core;
 
-import Shapes.Shape;
+import shapes.Shape;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,6 +84,24 @@ public class Editor {
         List<String> found = new ArrayList<>();
         for (int i = 0; i < shapes.size(); i++) {
             if (shapes.get(i).isContainedInRect(x, y, w, h)) {
+                found.add((i + 1) + ". " + shapes.get(i).describe());
+            }
+        }
+        return found;
+    }
+
+    /**
+     * Намира всички фигури изцяло съдържани в кръгова област.
+     *
+     * @param cx x координата на центъра
+     * @param cy y координата на центъра
+     * @param r  радиус
+     * @return списък с описания на намерените фигури
+     */
+    public List<String> findWithinCircle(double cx, double cy, double r) {
+        List<String> found = new ArrayList<>();
+        for (int i = 0; i < shapes.size(); i++) {
+            if (shapes.get(i).isContainedInCircle(cx, cy, r)) {
                 found.add((i + 1) + ". " + shapes.get(i).describe());
             }
         }

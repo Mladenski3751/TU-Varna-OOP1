@@ -1,6 +1,6 @@
-package Commands;
+package commands;
 
-import Core.Editor;
+import core.Editor;
 
 /**
  * Команда за изтриване на фигура по пореден номер[cite: 135].

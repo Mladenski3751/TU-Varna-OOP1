@@ -1,6 +1,6 @@
-package Commands;
+package commands;
 
-import Core.Editor;
+import core.Editor;
 import java.util.List;
 
 /**

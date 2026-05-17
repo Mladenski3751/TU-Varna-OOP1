@@ -1,9 +1,9 @@
-package Application;
+package application;
 
-import Commands.*;
-import Core.Editor;
-import IO.SvgFileHandler;
-import Shapes.Shape;
+import commands.*;
+import core.Editor;
+import io.SvgFileHandler;
+import shapes.Shape;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -149,7 +149,7 @@ public class Application {
         }
         try {
             fileHandler.save(currentFile, editor.toSvg());
-            System.out.println("Successfully saved " + currentFile);
+            System.out.println("Successfully saved the changes to " + currentFile);
         } catch (Exception e) {
             System.out.println("Error: could not save file.");
         }

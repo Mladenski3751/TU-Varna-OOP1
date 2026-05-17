@@ -1,4 +1,4 @@
-package Shapes;
+package shapes;
 
 /**
  * Клас, представляващ геометрична фигура кръг.
@@ -42,5 +42,11 @@ public class Circle extends Shape {
     public boolean isContainedInRect(double rx, double ry, double rw, double rh) {
         return (cx - r >= rx) && (cx + r <= rw) &&
                 (cy - r >= ry) && (cy + r <= rh);
+    }
+
+    @Override
+    public boolean isContainedInCircle(double ocx, double ocy, double or) {
+        double dist = Math.sqrt((cx - ocx) * (cx - ocx) + (cy - ocy) * (cy - ocy));
+        return dist + r <= or;
     }
 }

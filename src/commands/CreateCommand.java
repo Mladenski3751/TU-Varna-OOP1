@@ -1,8 +1,8 @@
-package Commands;
+package commands;
 
-import Core.Editor;
-import Shapes.Shape;
-import Shapes.ShapeFactory;
+import core.Editor;
+import shapes.Shape;
+import shapes.ShapeFactory;
 
 /**
  * Команда за създаване на нова фигура[cite: 135].

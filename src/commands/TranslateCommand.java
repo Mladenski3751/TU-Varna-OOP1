@@ -1,6 +1,6 @@
-package Commands;
+package commands;
 
-import Core.Editor;
+import core.Editor;
 
 /**
  * Команда за транслация (преместване) на една или всички фигури[cite: 135].
@@ -32,15 +32,15 @@ public class TranslateCommand implements Command {
 
         try {
             if (args.length == 2) {
-                double dx = parseKeyValue(args[0]);
-                double dy = parseKeyValue(args[1]);
-                return editor.translateAll(dx, dy);
+                double vertical   = parseKey(args, "vertical");
+                double horizontal = parseKey(args, "horizontal");
+                return editor.translateAll(horizontal, vertical);
 
             } else if (args.length == 3) {
-                int index = Integer.parseInt(args[0]);
-                double dx = parseKeyValue(args[1]);
-                double dy = parseKeyValue(args[2]);
-                return editor.translateOne(index, dx, dy);
+                int index         = Integer.parseInt(args[0]);
+                double vertical   = parseKey(args, "vertical");
+                double horizontal = parseKey(args, "horizontal");
+                return editor.translateOne(index, horizontal, vertical);
 
             } else {
                 return "Error: wrong number of arguments for translate.";
@@ -51,12 +51,14 @@ public class TranslateCommand implements Command {
     }
 
     /**
-     * Помощен метод за извличане на числова стойност от формат ключ=стойност.
-     * @param token Низ от типа "vertical=10".
-     * @return Числовата стойност след знака "=".
+     * Търси токен по ключ и връща числовата му стойност.
      */
-    private double parseKeyValue(String token) {
-        String[] parts = token.split("=");
-        return Double.parseDouble(parts[1]);
+    private double parseKey(String[] args, String key) {
+        for (String arg : args) {
+            if (arg.startsWith(key + "=")) {
+                return Double.parseDouble(arg.split("=")[1]);
+            }
+        }
+        return 0.0;
     }
 }
