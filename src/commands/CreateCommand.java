@@ -5,7 +5,7 @@ import shapes.Shape;
 import shapes.ShapeFactory;
 
 /**
- * Команда за създаване на нова фигура[cite: 135].
+ * Команда за създаване на нова фигура.
  */
 public class CreateCommand implements Command {
     private final Editor editor;
@@ -26,7 +26,7 @@ public class CreateCommand implements Command {
     }
 
     /**
-     * Парсва аргументите и добавя нова фигура чрез фабриката[cite: 135].
+     * Парсва аргументите и добавя нова фигура чрез фабриката.
      * @param args Аргументи: [0] тип фигура, [1...] параметри на фигурата.
      * @return Съобщение за успешно създаване или грешка.
      */

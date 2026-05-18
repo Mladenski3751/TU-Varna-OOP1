@@ -4,7 +4,7 @@ import core.Editor;
 import java.util.List;
 
 /**
- * Команда за извеждане на информация за всички фигури на екрана[cite: 135].
+ * Команда за извеждане на информация за всички фигури на екрана.
  */
 public class PrintCommand implements Command {
     private final Editor editor;
@@ -23,7 +23,7 @@ public class PrintCommand implements Command {
     }
 
     /**
-     * Извлича всички фигури от редактора и ги форматира като текст[cite: 135].
+     * Извлича всички фигури от редактора и ги форматира като текст.
      * @param args Не приема допълнителни аргументи.
      * @return Списък с фигурите или съобщение, че няма заредени такива.
      */

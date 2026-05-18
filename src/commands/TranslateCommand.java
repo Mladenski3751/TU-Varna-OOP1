@@ -3,7 +3,7 @@ package commands;
 import core.Editor;
 
 /**
- * Команда за транслация (преместване) на една или всички фигури[cite: 135].
+ * Команда за транслация (преместване) на една или всички фигури.
  */
 public class TranslateCommand implements Command {
     private final Editor editor;
@@ -22,7 +22,7 @@ public class TranslateCommand implements Command {
     }
 
     /**
-     * Изпълнява преместването на база на подадените аргументи[cite: 135].
+     * Изпълнява преместването на база на подадените аргументи.
      * Поддържа формати: [dx] [dy] или [номер] [dx] [dy].
      * @param args Параметри за транслация.
      * @return Съобщение за успешна транслация.

@@ -10,8 +10,8 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 /**
- * Основен клас на приложението. [cite: 2, 4]
- * Управлява Command Line Interface (CLI) и жизнения цикъл на SVG редактора. [cite: 70, 73]
+ * Основен клас на приложението.
+ * Управлява Command Line Interface (CLI) и жизнения цикъл на SVG редактора.
  */
 public class Application {
     private final Editor editor = new Editor();

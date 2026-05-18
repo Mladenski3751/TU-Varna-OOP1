@@ -4,7 +4,7 @@ import core.Editor;
 import java.util.List;
 
 /**
- * Команда за извеждане на фигури, намиращи се в определен регион[cite: 136].
+ * Команда за извеждане на фигури, намиращи се в определен регион.
  */
 public class WithinCommand implements Command {
     private final Editor editor;
@@ -23,7 +23,7 @@ public class WithinCommand implements Command {
     }
 
     /**
-     * Проверява кои фигури се съдържат изцяло в указания регион[cite: 136].
+     * Проверява кои фигури се съдържат изцяло в указания регион.
      * @param args [0] тип регион, [1-4] координати и размери.
      * @return Списък с намерените фигури.
      */
